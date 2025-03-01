@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <script>
+        setTimeout(function() {
+            window.location.href = "index1.html"; // Redirect to second page after 3 seconds
+        }, 5000);
+        </script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 100vh;
+            background-color: #000;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            margin: 0;
+            z-index: 1000;
+            font-size: 2rem;
+            text-shadow: 0 0 3px #2707e0, 0 0 6px #6dd4fd;
+        color: rgb(18, 231, 247);
+            
+        }
+
+        .robot-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-grow: 1;
+            padding: 20px;
+        }
+
+        .robot {
+            width: 70%;
+            max-width: 500px;
+            animation: float 3s infinite ease-in-out;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        .gif-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .gif-container video {
+            width: 50%;
+            max-width: 200px;
+            border-radius: 10px;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.5rem;
+                padding: 15px;
+            }
+
+            .robot {
+                width: 60%;
+            }
+
+            .gif-container video {
+                width: 70%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1 >Welcome</h1>
+
+
+    <div class="robot-container">
+        <img src="images/robot.jpeg" alt="Robot" class="robot">
+    </div>
+
+    <div class="gif-container">
+        <video src="images/loader.mp4" autoplay loop muted></video>
+    </div>
+</body>
+<script type="text/javascript" src="js/main.js"></script>
+
+</html>
